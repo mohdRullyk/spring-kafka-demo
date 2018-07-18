@@ -1,7 +1,9 @@
 package com.cashlez.dev.springkafkademo.consumer;
 
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ReceiveMessages {
 
     @KafkaListener(topics = "simple-messages", group = "test-consumer-group")
